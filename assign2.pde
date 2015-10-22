@@ -55,46 +55,38 @@ void draw() {
    break;
      
    case game_run:   
-     //backGround1
      bg_position1 += 1;
      if(bg_position1 == 641){
        bg_position1 = -640;
      }
      image(bg1, bg_position1, 0);
      
-     //backGround2
      bg_position2 += 1 ;
      if(bg_position2 == 641){
        bg_position2 = -641;
      }
      image(bg2, bg_position2, 0);
          
-     //enemy
      enemy_position_x += 5;
      enemy_position_x %= 640;
      enemy_speed();
      image(enemy, enemy_position_x, enemy_position_y);
   
-     //fighter
      fighter_position_move_x();
      fighter_position_move_y();
      fighter_max_x();
      fighter_max_y();
      
-     //hitEnemy
      hit_enemy();
      image(fighter, fighter_position_x, fighter_position_y);
      
-     //blood+treasure
      fill(255, 0, 0);
      get_treasure();
      calculate_blood();
      rect(10, 5, bloodWidth, 20 );
      image(treasure, treasure_position_x, treasure_position_y);
      
-     //hp
      image(hp, 0 ,0);
-     //game over
      
      if(blood <= 0)
        gameState = game_over;
