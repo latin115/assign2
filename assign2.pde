@@ -44,7 +44,6 @@ void draw() {
      fighter_position_x = 588;
      treasure_position_x = floor(random(110, 600));
      treasure_position_y = floor(random(440));
-     blood = 20;
      image(start_bg, 0, 0);
      if(mouseX >= 210 && mouseX <= 430 && 
         mouseY >= 382 && mouseY <= 412){
@@ -54,7 +53,8 @@ void draw() {
         }
    break;
      
-   case game_run:   
+   case game_run:
+     blood = 20;
      bg_position1 += 1;
      if(bg_position1 == 641){
        bg_position1 = -640;
