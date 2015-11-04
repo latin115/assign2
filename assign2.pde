@@ -100,6 +100,8 @@ void draw() {
             if(mousePressed)
               gameState = game_run;
               blood=20;
+              fighter_position_x = 589;
+              fighter_position_y = 214;
      }
      break;  
   }
