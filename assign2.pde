@@ -50,11 +50,11 @@ void draw() {
           image(start_buttom, 0, 0);
           if(mousePressed)
             gameState = game_run;
+            blood = 20;
         }
    break;
      
    case game_run:
-     blood = 20;
      bg_position1 += 1;
      if(bg_position1 == 641){
        bg_position1 = -640;
@@ -99,6 +99,7 @@ void draw() {
             image(end_buttom, 0, 0);
             if(mousePressed)
               gameState = game_run;
+              blood=20;
      }
      break;  
   }
